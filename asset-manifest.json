@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cimemate/static/css/main.084e3866.css",
+    "main.js": "/cimemate/static/js/main.29476a7f.js",
+    "index.html": "/cimemate/index.html",
+    "main.084e3866.css.map": "/cimemate/static/css/main.084e3866.css.map",
+    "main.29476a7f.js.map": "/cimemate/static/js/main.29476a7f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.084e3866.css",
+    "static/js/main.29476a7f.js"
+  ]
+}
