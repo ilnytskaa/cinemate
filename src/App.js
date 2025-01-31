@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { HashRouter, Route, Routes, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Favorites from './Favorites'; 
+import MovieDetail from './MovieDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div>
+        {/* Панель навігації */}
+        <nav className="navbar">
+          <div>
+            <Link to="/">🎬 Головна</Link>
+            <Link to="/favorites">❤️ Улюблені</Link>
+          </div>
+          <div>
+            <Link to="/about">ℹ️ Про нас</Link>
+          </div>
+        </nav>
+
+        {/* Маршрути */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/movie/:id" element={<MovieDetail />} />
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }
 

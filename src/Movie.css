@@ -1,0 +1,109 @@
+.genre-filter {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.genre-filter select,
+.genre-filter button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.genre-filter button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+}
+
+.genre-filter select:focus,
+.genre-filter button:hover {
+  border-color: #ff4d4d;
+  background-color: #ff4d4d;
+}
+
+.movie {
+  background: #2c2c2c;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.movie:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(255, 77, 77, 0.3);
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.movie .movie_title {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.movie .movie_genres {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.movie_genres li {
+  background: #ff4d4d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Кнопка "Улюблені" */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.favorite-btn.active {
+  background: #ff4d4d;
+  color: white;
+}
+
+.movie_link {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.movie_link:hover {
+  color: #f888cb;
+}
