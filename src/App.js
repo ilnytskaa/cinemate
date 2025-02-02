@@ -9,7 +9,6 @@ function App() {
   return (
     <HashRouter>
       <div>
-        {/* Панель навігації */}
         <nav className="navbar">
           <div>
             <Link to="/">🎬 Головна</Link>
@@ -20,7 +19,6 @@ function App() {
           </div>
         </nav>
 
-        {/* Маршрути */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

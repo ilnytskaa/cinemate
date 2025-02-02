@@ -8,7 +8,7 @@ class Home extends React.Component {
     isLoading: true,
     movies: [],
     error: null,
-    selectedGenre: 'All', // Додаємо стан для жанру
+    selectedGenre: 'All', 
   };
 
   getMovies = async () => {
@@ -33,10 +33,8 @@ class Home extends React.Component {
   render() {
     const { isLoading, movies, selectedGenre, error } = this.state;
 
-    // Отримуємо унікальні жанри
     const genres = ['All', ...new Set(movies.flatMap(movie => movie.genres))];
 
-    // Фільтруємо фільми за вибраним жанром
     const filteredMovies = selectedGenre === 'All'
       ? movies
       : movies.filter(movie => movie.genres.includes(selectedGenre));
@@ -48,10 +46,9 @@ class Home extends React.Component {
             <span className="loader_text">Завантаження...</span>
           </div>
         ) : error ? (
-          <div className="error-message">{error}</div> // Вивід помилки
+          <div className="error-message">{error}</div> 
         ) : (
           <div>
-            {/* Додано селект для фільтрації за жанром */}
             <div className="genre-filter">
               <select
                 value={selectedGenre}
@@ -63,9 +60,8 @@ class Home extends React.Component {
                   </option>
                 ))}
               </select>
-            </div>
-
-            {/* Відображення фільмів згідно з фільтром */}
+                </div>
+                
             <div className="movies">
               {filteredMovies.map((movie) => (
                 <Movie
